@@ -1,0 +1,27 @@
+<section data-ng-controller="SongsController">
+  <form data-ng-submit="create()" novalidate>
+      <div class="container-about">
+         <a class="button-signout" href="/signout">Sign out</a>
+        <h1 class="header-intro">New Song</h1>
+    <div>
+      <label class="header-boxes" for="title">Title</label>
+      <div>
+        <input type="text" data-ng-model="title" id="title" placeholder="Title" required>
+      </div>
+    </div>
+    <div>
+      <label class="header-boxes" for="content">Content</label>
+      <div>
+        <textarea data-ng-model="content" id="content" cols="30" rows="10" placeholder="Content"></textarea>
+      </div>
+    </div>
+    <div>
+      </br>
+      <input class="button" type="submit">
+    </div>
+    <div data-ng-show="error">
+      <strong data-ng-bind="error"></strong>
+    </div>
+    </div>
+  </form>
+</section>

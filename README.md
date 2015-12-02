@@ -867,3 +867,5 @@ angular.module('example').controller('ExampleController', ['$scope', 'Authentica
   }
 ]);
 ```
+
+Now, push all of this to your repo and we're done. All levels of MEAN have been addressed.

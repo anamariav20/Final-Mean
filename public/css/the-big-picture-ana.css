@@ -1,0 +1,113 @@
+.header 
+{
+	font-family: 'Avant Garde', Avantgarde, 'Century Gothic', CenturyGothic, AppleGothic, sans-serif;
+	font-size:870%;
+	color: #3399CC;
+}
+
+.header-intro
+{
+	font-family: 'Avant Garde', Avantgarde, 'Century Gothic', CenturyGothic, AppleGothic, sans-serif;
+	font-size:400%;
+	color: #282828 ;
+}
+
+.header-boxes
+{
+	font-family: 'Avant Garde', Avantgarde, 'Century Gothic', CenturyGothic, AppleGothic, sans-serif;
+	font-size:200%;
+	color: #282828 ;
+}
+
+.header-boxes-title
+{
+	font-family: 'Avant Garde', Avantgarde, 'Century Gothic', CenturyGothic, AppleGothic, sans-serif;
+	font-size:200%;
+	color: #3399CC ;
+}
+
+.list-view
+{
+	font-family: 'Avant Garde', Avantgarde, 'Century Gothic', CenturyGothic, AppleGothic, sans-serif;
+	font-size:120%;
+	color: #282828 ;
+}
+.list-view-creator
+{
+	font-family: 'Avant Garde', Avantgarde, 'Century Gothic', CenturyGothic, AppleGothic, sans-serif;
+	font-size:120%;
+	color: #3399CC;
+}
+.header-hello
+{
+	font-family: 'Avant Garde', Avantgarde, 'Century Gothic', CenturyGothic, AppleGothic, sans-serif;
+	font-size:400%;
+	color: #3399CC ;
+}
+
+.header-signforms
+{
+	font-family: 'Avant Garde', Avantgarde, 'Century Gothic', CenturyGothic, AppleGothic, sans-serif;
+	font-size:280%;
+	color: #282828 ;
+}
+
+body {
+    margin-top: 50px;
+    margin-bottom: 50px;
+    background: url(../img/background.jpg) no-repeat center center fixed;
+    -webkit-background-size: 100% 100%;
+    -moz-background-size: 100% 100%;
+    -o-background-size: 100% 100%;
+    background-size: 100% 100%;    
+}
+
+.container {
+	margin-top:100px;
+   margin-left: 130px;
+   padding-left:100px;
+
+}
+
+.row {
+  margin-right: 5px;
+  margin-left: 5px;
+}
+
+.container-about {
+	margin-top:100px;
+   margin-right: 500px;
+   margin-left: 100px;
+   padding-left:100px;
+   padding-right:100px;
+}
+
+
+.button-signout{
+  padding: 5px 50px;
+  font-size: 25px;
+  line-height: 2;
+  border-radius: 10px;
+  color: #fff;
+  background-color: #FF6666;
+  border-color: #FF6666;
+  position: absolute;right: 60px;top: 35px;
+}
+
+.button{
+  padding: 5px 50px;
+  font-size: 25px;
+  line-height: 2;
+  border-radius: 10px;
+  color: #fff;
+  background-color: #FF6666;
+  border-color: #FF6666;
+}
+
+.copyright{
+	font-family: 'Avant Garde', Avantgarde, 'Century Gothic', CenturyGothic, AppleGothic, sans-serif;
+	font-size:150%;
+	color: white;
+text-align:center;
+  
+}

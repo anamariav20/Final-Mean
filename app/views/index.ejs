@@ -1,8 +1,24 @@
 <!DOCTYPE html>
-<html xmlns:ng="http://angularjs.org">
+<html  class="full" xmlns:ng="http://angularjs.org">
 <head>
 	<!-- Use the 'title' property to render a page title  -->
 	<title><%= title %></title>
+	
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <!-- Bootstrap Core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="css/the-big-picture.css" rel="stylesheet">
+    
+	<!-- Ana's Custom CSS -->
+    <link href="css/the-big-picture-ana.css" rel="stylesheet">	
+	
 </head>
 <body>
 	<!-- Render AngularJS views  -->
@@ -17,11 +33,23 @@
 	<script type="text/javascript" src="/lib/angular/angular.js"></script>
 	<script type="text/javascript" src="/lib/angular-route/angular-route.js"></script>
 	<script type="text/javascript" src="/lib/angular-resource/angular-resource.js"></script>
-	<script type="text/javascript" src="/articles/articles.client.module.js"></script>
-	<script type="text/javascript" src="/articles/controllers/articles.client.controller.js"></script>
-	<script type="text/javascript" src="/articles/services/articles.client.service.js"></script>
-	<script type="text/javascript" src="/articles/config/articles.client.routes.js"></script>	
+	<script type="text/javascript" src="/songs/songs.client.module.js"></script>
+	<script type="text/javascript" src="/songs/controllers/songs.client.controller.js"></script>
+	<script type="text/javascript" src="/songs/services/songs.client.service.js"></script>
+	<script type="text/javascript" src="/songs/config/songs.client.routes.js"></script>	
+	<!-- Load the upload module -->
+	<script type="text/javascript" src="/uploads/uploads.client.module.js"></script>
+	<script type="text/javascript" src="/uploads/controllers/uploads.client.controller.js"></script>
+	<script type="text/javascript" src="/uploads/services/uploads.client.service.js"></script>
+	<script type="text/javascript" src="/uploads/config/uploads.client.routes.js"></script>	
 
+	<!-- Load the categories module -->
+	<script type="text/javascript" src="/categories/categories.client.module.js"></script>
+	<script type="text/javascript" src="/categories/controllers/categories.client.controller.js"></script>
+	<script type="text/javascript" src="/categories/services/categories.client.service.js"></script>
+	<script type="text/javascript" src="/categories/config/categories.client.routes.js"></script>	
+
+	
 	<!-- Load the example module -->
 	<script type="text/javascript" src="/example/example.client.module.js"></script>
 	<script type="text/javascript" src="/example/controllers/example.client.controller.js"></script>

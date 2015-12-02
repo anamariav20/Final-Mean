@@ -1,0 +1,16 @@
+<section data-ng-controller="UploadsController" data-ng-init="find()">
+  <h1>uploads</h1>
+  <ul>
+    <li data-ng-repeat="upload in uploads">
+      <a data-ng-href="#!/uploads/{{upload._id}}" data-ng-bind="upload.title"></a>
+      <br>
+      <small data-ng-bind="upload.created | date:'medium'"></small>
+      <small>/</small>
+      <small data-ng-bind="upload.creator.fullName"></small>
+      <p data-ng-bind="upload.content"></p>
+    </li>
+  </ul>
+ <div data-ng-hide="!uploads || uploads.length">
+    No uploads yet, why don't you <a href="/#!/uploads/create">create one</a>?
+  </div>
+</section>

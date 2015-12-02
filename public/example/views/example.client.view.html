@@ -1,14 +1,65 @@
 <section ng-controller="ExampleController">
-  <div data-ng-show="!authentication.user">
-    <a href="/signup">Signup</a>
-    <a href="/signin">Signin</a>
-  </div>
-  <div data-ng-show="authentication.user">
-    <h1>Hello <span data-ng-bind="authentication.user.fullName"></span></h1>
-    <a href="/signout">Signout</a>
-    <ul>
-      <li><a href="/#!/articles">List Articles</a></li>
-      <li><a href="/#!/articles/create">Create Article</a></li>
-    </ul>
-  </div>
+    <div data-ng-show="!authentication.user">
+
+        <!-- Page Content -->
+        <div class="container">
+            <div class="row">
+                
+                    <p class="header">The Piano Room </p>
+                    <p class="header-intro"> </br> </b>► Share and download </br> sheet music for free.</br></br></p>
+
+
+                            <a class="button" href="/about">About</a> &nbsp &nbsp &nbsp 
+                         
+                          <a class="button" href="/signin">Sign In</a>&nbsp &nbsp &nbsp 
+                        
+                           <a class="button" href="/signup">Sign Up</a>
+                           </div>
+            <!-- /.row -->
+        </div>
+        <!-- /.container -->
+                          
+        <nav class="navbar navbar-inverse navbar-fixed-bottom" role="navigation">
+  
+                <!-- Brand and toggle get grouped for better mobile display -->
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                </div>
+
+
+                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                  
+                 
+                        <p class="copyright"> Copyright © 2015 The Piano Room </p>
+                  
+
+            
+            </div>
+    </div>
+    <div data-ng-show="authentication.user">
+        <div class="container">
+        <h1 class="header-hello">Hello <span data-ng-bind="authentication.user.fullName"></span></h1>
+       </br>
+       </br>
+        <ul>
+            <li ><a class="header-signforms" href="/#!/songs/create">Create Song</a></li>
+            <li ><a class="header-signforms" href="/#!/songs">List Songs</a></li>
+        </ul>
+        </br></br> &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp
+        <a class="button" href="/signout">Sign out</a>
+    </div>
+</div>
+    </nav>
+    <!-- jQuery -->
+    <script src="js/jquery.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="js/bootstrap.min.js"></script>
+
 </section>
+    

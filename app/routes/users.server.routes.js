@@ -54,4 +54,4 @@ module.exports = function(app) {
 
 	// Set up the 'signout' route
 	app.get('/signout', users.signout);
-};
+}

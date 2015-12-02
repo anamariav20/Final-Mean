@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+	 <!-- Bootstrap Core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="css/the-big-picture.css" rel="stylesheet">
+    
+	<!-- Ana's Custom CSS -->
+    <link href="css/the-big-picture-ana.css" rel="stylesheet">	
+
+	<!-- Use the 'title' property to render a page title  -->
+	<title><%= title %></title>
+</head>
+
+<body>
+<% for(var i in messages) { %>
+	   <div class="flash"><%= messages[i] %></div>
+	<% } %>
+
+
+					<!-- Render the signin form  -->
+					<form action="/about" method="post">
+						
+						 <div class="container-about">
+            <div class="row">
+                
+							<p class="header"> About </p>
+							<p class="header-intro"> We are a community </br> website focused on <br/> helping musicians to share </br> and enjoy MUSIC ♫ </br> </br> </p>
+
+				<a href="/signin" type="button" class="button">Sing in</a> &nbsp &nbsp &nbsp &nbsp &nbsp
+						  <a href="/signup" type="button" class="button">Sing up</a> 
+
+
+					</div>
+					</div>
+			</form>
+</body>
+
+</html>

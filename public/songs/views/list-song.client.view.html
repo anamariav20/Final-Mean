@@ -1,0 +1,21 @@
+<section data-ng-controller="SongsController" data-ng-init="find()">
+  <div class="container-about">
+    <a class="button-signout" href="/signout">Sign out</a>
+      <h1 class="header-intro">Songs</h1>
+  <ul>
+    <li class="list-view" data-ng-repeat="song in songs">
+      <a class="list-view-creator" data-ng-href="#!/songs/{{song._id}}" data-ng-bind="song.title"></a>
+      <br>
+      <small class="list-view" data-ng-bind="song.created | date:'medium'"></small>
+      <small>/</small>
+      <small class="list-view" data-ng-bind="song.creator.fullName"></small>
+      <p class="list-view" data-ng-bind="song.content"></p>
+    </li>
+  </ul>
+  </br>
+  <a class="button" href="/#!/songs/create">Create Song</a>
+ <div data-ng-hide="!songs || songs.length">
+    No songs yet, why don't you <a href="/#!/songs/create">create one</a>?
+  </div>
+  </div>
+</section>

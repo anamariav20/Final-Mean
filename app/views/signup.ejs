@@ -1,45 +1,53 @@
 <!DOCTYPE html>
 <html>
 <head>
+
+	 <!-- Bootstrap Core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="css/the-big-picture.css" rel="stylesheet">
+    
+	<!-- Ana's Custom CSS -->
+    <link href="css/the-big-picture-ana.css" rel="stylesheet">	
+
 	<!-- Use the 'title' property to render a page title  -->
 	<title><%= title %></title>
 </head>
+
 <body>
   	<!-- Display flash messages  -->
 	<% for(var i in messages) { %>
 	   <div class="flash"><%= messages[i] %></div>
 	<% } %>
-
+	
+	<div class="container-about">
 	<!-- Render the signup form  -->
 	<form action="/signup" method="post">
 		<div>
-			<label>First Name:</label>
+			<label class="header-signforms">First Name:</label>
 			<input type="text" name="firstName" />
 		</div>
 		<div>
-			<label>Last Name:</label>
+			<label class="header-signforms">Last Name:</label>
 			<input type="text" name="lastName" />
 		</div>
 		<div>
-			<label>Email:</label>
+			<label class="header-signforms">Email:</label>
 			<input type="text" name="email" />
 		</div>
 		<div>
-			<label>Username:</label>
+			<label class="header-signforms">Username:</label>
 			<input type="text" name="username" />
 		</div>
 		<div>	
-			<label>Password:</label>
+			<label class="header-signforms">Password:</label>
 			<input type="password" name="password" />
 		</div>
 		<div>
-			<input type="submit" value="Sign up" />
+			<input class= "button" type="submit" value="Sign up" />
 		</div>
 	</form>
-
-	<!-- Render the OAuth authentication links  -->
-	<a href="/oauth/facebook">Sign in with Facebook</a>
-	<a href="/oauth/twitter">Sign in with Twitter</a>
-	<a href="/oauth/google">Sign in with Google</a>
+</div>
 </body>
 </html>
