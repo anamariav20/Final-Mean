@@ -1,14 +1,20 @@
+  <img ng-src="data:image/jpeg;base64,{{article.image}}" id="photo-id" width="200" height="200"/>
 <section data-ng-controller="UploadsController" data-ng-init="findOne()">
-  <h1 data-ng-bind="upload.title"></h1>
-  <div data-ng-show="authentication.user._id == upload.creator._id">
-    <a href="/#!/uploads/{{upload._id}}/edit">edit</a>
-    <a href="#" data-ng-click="delete();">delete</a>
-  </div>
+  <a class="button-signout" href="/signout">Sign out</a>
+    <div class="container-about">
+  <h1 class="header-boxes-title" data-ng-bind="upload.title"></h1>
   <small>
-    <em>Posted on</em>
-    <em data-ng-bind="upload.created | date:'mediumDate'"></em>
-    <em>by</em>
-    <em data-ng-bind="upload.creator.fullName"></em>
+    <em class="header-boxes">Posted on</em>
+    <em class="header-boxes" data-ng-bind="upload.created | date:'mediumDate'"></em>
+    <em class="header-boxes">by</em>
+    <em class="header-boxes" data-ng-bind="upload.creator.fullName"></em>
   </small>
-  <p data-ng-bind="upload.content"></p>
+  <p class="header-boxes" data-ng-bind="upload.content"></p>
+   <div class="header-boxes" data-ng-show="authentication.user._id == upload.creator._id">
+   <a class="button" href="/#!/uploads/{{upload._id}}/edit">edit</a>
+    <a class="button" href="#" data-ng-click="delete();">delete</a>
+    
+  </div>
+  
+  </div>
 </section>

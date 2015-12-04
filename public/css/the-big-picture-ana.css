@@ -82,6 +82,13 @@ body {
    padding-right:100px;
 }
 
+.container-upload {
+	margin-top:100px;
+   margin-right: 500px;
+   margin-left: 80px;
+   padding-left:100px;
+   padding-right:100px;
+}
 
 .button-signout{
   padding: 5px 50px;

@@ -12,14 +12,14 @@ var UploadSchema = new Schema({
         trim: true,
         required: 'Title cannot be blank'
     },
-    uploadId: {
-        type: String,
-        default: '',
-        trim: true
-    },
-    category: {
+
+    creator: {
         type: Schema.ObjectId,
-        ref: 'Category'
+        ref: 'User'
+    },
+    image: {
+    type: String,
+    default: ''
     }
 });
 

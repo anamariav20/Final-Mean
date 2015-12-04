@@ -10,9 +10,10 @@
     <em class="header-boxes" data-ng-bind="song.creator.fullName"></em>
   </small>
   <p class="header-boxes" data-ng-bind="song.content"></p>
-  <div class="header-boxes" data-ng-show="authentication.user._id == song.creator._id">
-    <a class="button" href="/#!/songs/{{song._id}}/edit">edit</a>
+   <div class="header-boxes" data-ng-show="authentication.user._id == song.creator._id">
+   <a class="button" href="/#!/songs/{{song._id}}/edit">edit</a>
     <a class="button" href="#" data-ng-click="delete();">delete</a>
+    
   </div>
   
   </div>

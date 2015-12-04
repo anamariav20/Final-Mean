@@ -1,4 +1,5 @@
 var mongoose = require('mongoose'),
+    fs = require('fs'),
     Upload = mongoose.model('Upload');
 
 // ERROR HANDLING
@@ -95,16 +96,60 @@ exports.update = function(req, res) {
 
 //DELETE
 exports.delete = function(req, res) {
-    var upload = req.upload;
+        var upload = req.upload;
 
-    upload.remove(function(err) {
-        if (err) {
-            return res.status(400).send({
-                message: getErrorMessage(err)
-            });
-        }
-        else {
-            res.json(upload);
-        }
+        upload.remove(function(err) {
+            if (err) {
+                return res.status(400).send({
+                    message: getErrorMessage(err)
+                });
+            }
+            else {
+                res.json(upload);
+            }
     });
+};
+
+
+exports.createWithUpload = function(req, res) {
+ var file = req.files.file;
+ console.log(file.name);
+ console.log(file.type);
+ console.log(file.path);
+ console.log(req.body.upload);
+
+var art = JSON.parse(req.body.upload);
+var upload = new Upload(art);
+upload.user = req.user;
+
+fs.readFile(file.path, function (err,original_data) {
+ if (err) {
+      return res.status(400).send({
+            message: errorHandler.getErrorMessage(err)
+        });
+  } 
+    // save image in db as base64 encoded - this limits the image size
+    // to there should be size checks here and in client
+  var base64Image = original_data.toString('base64');
+  fs.unlink(file.path, function (err) {
+      if (err)
+      { 
+          console.log('failed to delete ' + file.path);
+      }
+      else{
+        console.log('successfully deleted ' + file.path);
+      }
+  });
+  upload.image = base64Image;
+
+  upload.save(function(err) {
+    if (err) {
+        return res.status(400).send({
+            message: errorHandler.getErrorMessage(err)
+        });
+    } else {
+        res.json(upload);
+    }
+  });
+});
 };
