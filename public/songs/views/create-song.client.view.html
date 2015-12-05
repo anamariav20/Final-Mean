@@ -1,27 +1,62 @@
 <section data-ng-controller="SongsController">
   <form data-ng-submit="create()" novalidate>
-      <div class="container-about">
-         <a class="button-signout" href="/signout">Sign out</a>
-        <h1 class="header-intro">New Song</h1>
-    <div>
-      <label class="header-boxes" for="title">Title</label>
+
+    <div class="container-about">
+      <a class="button-signout" href="/signout">Sign out</a>
+      <h1 class="header-intro">New Song</h1>
       <div>
-        <input type="text" data-ng-model="title" id="title" placeholder="Title" required>
+        <label class="header-boxes" for="title">Title</label>
+        <div>
+          <input type="text" data-ng-model="title" id="title" placeholder="Title" required>
+        </div>
       </div>
-    </div>
-    <div>
-      <label class="header-boxes" for="content">Content</label>
+
       <div>
-        <textarea data-ng-model="content" id="content" cols="30" rows="10" placeholder="Content"></textarea>
+        <label class="header-boxes" for="composer">Composer</label>
+        <div>
+          <input type="text" data-ng-model="composer" id="composer" placeholder="Composer" required>
+        </div>
       </div>
-    </div>
-    <div>
-      </br>
-      <input class="button" type="submit">
-    </div>
-    <div data-ng-show="error">
-      <strong data-ng-bind="error"></strong>
-    </div>
+
+      <div>
+        <label class="header-boxes" for="genre">Genre</label>
+        <div>
+          <input type="text" data-ng-model="genre" id="genre" placeholder="Genre" required>
+        </div>
+      </div>
+      <!-- <input type="text" data-ng-model="categorySong" id="categorySong" placeholder="Category" required> -->
+
+      <div>
+        <label class="header-boxes" for="content">Content</label>
+        <div>
+          <textarea data-ng-model="content" id="content" cols="30" rows="5" placeholder="Content"></textarea>
+        </div>
+      </div>
+      
+      <div>
+        <label class="header-boxes" for="image">Upload Picture</label>
+        <div>
+      <form>
+        <input type="text" data-ng-model="image" id="image" placeholder="Insert Url" required value="" />
+      </form>
+      <script type="text/javascript">
+        document.getElementById('btn').onclick = function() {
+          var val = document.getElementById('imagename').value,
+            src = 'http://webpage.com/images/' + val + '.png',
+            img = document.createElement('img');
+
+          img.src = src;
+          document.body.appendChild(img);
+        }
+      </script>
+
+      <div>
+        </br>
+        <input class="button" type="submit">
+      </div>
+      <div data-ng-show="error">
+        <strong data-ng-bind="error"></strong>
+      </div>
     </div>
   </form>
 </section>

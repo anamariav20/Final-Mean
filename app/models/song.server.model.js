@@ -21,9 +21,17 @@ var SongSchema = new Schema({
         type: Schema.ObjectId,
         ref: 'User'
     },
-    categorySong: {
-        type: Schema.ObjectId,
-        ref: 'Category'
+    composer: {
+        type: String,
+        default: '',
+        trim: true,
+        required: 'Title cannot be blank'
+    },
+    genre: {
+        type: String,
+        default: '',
+        trim: true,
+        required: 'Title cannot be blank'
     }
 });
 

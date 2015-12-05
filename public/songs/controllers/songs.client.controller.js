@@ -12,6 +12,8 @@ angular.module('songs').controller('SongsController', ['$scope', '$routeParams',
         	// Use the form fields to create a new song $resource object
             var song = new Songs({
                 title: this.title,
+                composer: this.composer,
+                genre: this.genre,
                 content: this.content
             });
 

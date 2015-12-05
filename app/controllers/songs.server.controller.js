@@ -78,6 +78,8 @@ exports.update = function(req, res) {
 
     //makeupdates to title and content
     song.title = req.body.title;
+    song.composer = req.body.composer;
+    song.genre = req.body.genre;
     song.content = req.body.content;
 
     //call save on the Mongoose model

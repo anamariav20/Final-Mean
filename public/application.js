@@ -5,8 +5,7 @@
 var mainApplicationModuleName = 'mean';
 
 // Create the main application
-var mainApplicationModule = angular.module(mainApplicationModuleName, ['ngResource', 'ngRoute', 'users', 'example', 'songs','categories','uploads']);
-
+var mainApplicationModule = angular.module(mainApplicationModuleName, ['ngResource', 'ngRoute','users', 'example', 'songs','categories','uploads']);
 // Configure the hashbang URLs using the $locationProvider services 
 mainApplicationModule.config(['$locationProvider',
 	function($locationProvider) {
@@ -14,6 +13,7 @@ mainApplicationModule.config(['$locationProvider',
 	}
 ]);
 
+var applicationModuleVendorDependencies = ['ngResource', 'ngAnimate', 'ui.router', 'ui.bootstrap', 'ui.utils', 'angularFileUpload'];
 // Fix Facebook's OAuth bug
 if (window.location.hash === '#_=_') window.location.hash = '#!';
 

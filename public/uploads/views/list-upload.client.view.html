@@ -1,16 +1,23 @@
+<img ng-src="data:image/jpeg;base64,{{article.image}}" id="photo-id" width="40" height="40"/>
+
 <section data-ng-controller="UploadsController" data-ng-init="find()">
-  <h1>uploads</h1>
+  <div class="container-about">
+    <a class="button-signout" href="/signout">Sign out</a>
+      <h1 class="header-intro">uploads</h1>
+      <img ng-src="data:image/jpeg;base64,{{article.image}}" id="photo-id" width="40" height="40"/>
   <ul>
-    <li data-ng-repeat="upload in uploads">
-      <a data-ng-href="#!/uploads/{{upload._id}}" data-ng-bind="upload.title"></a>
+    <li class="list-view" data-ng-repeat="upload in uploads">
+      <a class="list-view-creator" data-ng-href="#!/uploads/{{upload._id}}" data-ng-bind="upload.title"></a>
       <br>
-      <small data-ng-bind="upload.created | date:'medium'"></small>
+      <small class="list-view" data-ng-bind="upload.created | date:'medium'"></small>
       <small>/</small>
-      <small data-ng-bind="upload.creator.fullName"></small>
-      <p data-ng-bind="upload.content"></p>
+      <small class="list-view" data-ng-bind="upload.creator.fullName"></small>
     </li>
   </ul>
+  </br>
+  <a class="button" href="/#!/uploads/create">Create upload</a>
  <div data-ng-hide="!uploads || uploads.length">
     No uploads yet, why don't you <a href="/#!/uploads/create">create one</a>?
+  </div>
   </div>
 </section>

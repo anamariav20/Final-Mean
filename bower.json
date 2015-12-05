@@ -1,9 +1,11 @@
 {
-	"name": "MEAN",
-	"version": "0.0.7",
-	"dependencies": {
-		"angular": "~1.2",
-		"angular-route": "~1.2",
-		"angular-resource": "~1.2"
-	}
+  "name": "MEAN",
+  "version": "0.0.7",
+  "dependencies": {
+    "angular": "~1.2",
+    "angular-route": "~1.2",
+    "angular-resource": "~1.2",
+    "ng-file-upload": "~10.1.7",
+    "ng-file-upload-shim": "~10.1.7"
+  }
 }
